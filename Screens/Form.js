@@ -1,10 +1,12 @@
 import React from "react";
 import { View, StyleSheet, ScrollView, Text, useState} from "react-native";
+import { Navigation } from "@react-navigation/native";
 import { FormBuilder } from "react-native-paper-form-builder";
 import { useForm } from "react-hook-form";
 import { Button  } from "react-native-paper";
 
-function BasicExample() {
+
+function BasicExample ({navigation}) {
   const { control, setFocus, handleSubmit } = useForm({
     defaultValues: {
       email: "",
@@ -100,9 +102,7 @@ function BasicExample() {
         />
         <Button style={styles.buttonforms}
           mode={"contained"}
-          onPress={handleSubmit((data: any) => {
-            console.log("form data", data);
-          })}
+          onPress={() => navigation.navigate('Main')}
         >
           Log In
         </Button>
