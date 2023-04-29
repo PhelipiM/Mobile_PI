@@ -9,13 +9,13 @@ import Cachorros from "../Screens/Cachorros";
 import Gatos from "../Screens/Gatos";
 import Passaros from "../Screens/Passaros";
 import Perfil from "../Screens/Perfil";
-import Form from "../Screens/Form";
+
 
 
 const Drawer = createDrawerNavigator();
 function MyDrawer() {
   return (
-    <Drawer.Navigator useLegacyImplementation initialRouteName="Form">
+    <Drawer.Navigator useLegacyImplementation initialRouteName="Home">
       <Drawer.Screen
         style={styles.drawer}
         name="Home"
@@ -44,13 +44,7 @@ function MyDrawer() {
         component={Perfil}
         options={{ drawerLabel: "Perfil", drawerActiveTintColor: "pink" }}
       />
-      <Drawer.Screen
-        style={styles.drawer}
-        name="Form"
-        icon=""
-        component={Form}
-        options={{ drawerLabel: "Form", drawerActiveTintColor: "pink" }}
-      />
+
     </Drawer.Navigator>
   );
 }

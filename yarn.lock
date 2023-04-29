@@ -4439,6 +4439,11 @@ expo-font@~11.1.1:
   dependencies:
     fontfaceobserver "^2.1.0"
 
+expo-image@~1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/expo-image/-/expo-image-1.0.0.tgz#a3670d20815d99e2527307a33761c9b0088823b1"
+  integrity sha512-A1amVExKhBa/eRXuceauYtPkf9izeje5AbxEWL09tgK91rf3GSIZXM5PSDGlIM0s7dpCV+Iet2jhwcFUfWaZrw==
+
 expo-keep-awake@~12.0.1:
   version "12.0.1"
   resolved "https://registry.npmjs.org/expo-keep-awake/-/expo-keep-awake-12.0.1.tgz"
@@ -7919,7 +7924,7 @@ react-native-web@~0.18.10:
 
 react-native@0.71.7:
   version "0.71.7"
-  resolved "https://registry.yarnpkg.com/react-native/-/react-native-0.71.7.tgz#d0ae409f6ee4fc7e7a876b4ca9d8d28934133228"
+  resolved "https://registry.npmjs.org/react-native/-/react-native-0.71.7.tgz"
   integrity sha512-Id6iRLS581fJMFGbBl1jP5uSmjExtGOvw5Gvh7694zISXjsRAsFMmU+izs0pyCLqDBoHK7y4BT7WGPGw693nYw==
   dependencies:
     "@jest/create-cache-key-function" "^29.2.1"

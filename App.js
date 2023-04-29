@@ -10,7 +10,7 @@ import { createBottomTabNavigator} from '@react-navigation/bottom-tabs'
 // import Tab from "./components/Tab"
 
 import Main from "./Screens/Main";
-import Form from "./Screens/Form"
+import Login from "./Screens/Login"
 
 import { ScrollView } from 'react-native-gesture-handler';
 
@@ -21,8 +21,8 @@ const Stack = createStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-    <Stack.Navigator initialRouteName='Form'>
-      <Stack.Screen name="Login" component={Form} />
+    <Stack.Navigator initialRouteName='Login'>
+      <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="Main" component={Main} options={{ title: "Amigos de Joinville" }}/>
     </Stack.Navigator>
     </NavigationContainer>

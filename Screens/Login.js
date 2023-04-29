@@ -31,7 +31,7 @@ function BasicExample ({navigation}) {
                 rules: {
                   required: {
                     value: true,
-                    message: 'Email is required',
+                    message: 'Email é necessário',
                   },
                 },
                 textInputProps: {
@@ -42,12 +42,12 @@ function BasicExample ({navigation}) {
                 name: 'city',
                 type: 'autocomplete',
                 textInputProps: {
-                  label: 'City',
+                  label: 'Cidade',
                 },
                 rules: {
                   required: {
                     value: true,
-                    message: 'City is required',
+                    message: 'Cidade é necessário',
                   },
                 },
                 options: [
@@ -91,11 +91,11 @@ function BasicExample ({navigation}) {
               rules: {
                 required: {
                   value: true,
-                  message: "Password is required",
+                  message: "Senha é necessário",
                 },
               },
               textInputProps: {
-                label: "Password",
+                label: "Senha",
               },
             },
           ]}
