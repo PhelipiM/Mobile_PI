@@ -1,18 +1,19 @@
 import React from 'react';
 // import { Card } from 'react-native-paper';
-import { Image, Text, View, StyleSheet, ScrollView } from 'react-native';
+import { Text, View, StyleSheet, ScrollView } from 'react-native';
 import { Card } from 'react-native-paper';
+
 
 function Calopsitas(props) {
   return (
     <Card style={styles.card}>
     <Card.Content>
-    <Image
+    <Card.Cover
         source={{uri: props.calopsita.capa}}
         style={styles.calopsita}
       />
-      <Text style={{ color: 'darked' }}> {props.calopsita.titulo}</Text>
-      <Text style={{ fontSize: 12 }}> {props.calopsita.raca}</Text>
+      <Text style={styles.textocard}> {props.calopsita.titulo}</Text>
+      <Text style={styles.textocard}> {props.calopsita.raca}</Text>
     </Card.Content>
     </Card>
   );
@@ -55,7 +56,7 @@ export default function App() {
     return (
       <ScrollView style={styles.scroll}>
         <View style={styles.container}>
-          <Text style={{ fontSize: 19, fontWeigth: 'bold', textAlign:'center' }}>Se encante e adote!</Text>
+          <Text style={styles.texto}>Se encante e adote!</Text>
         <View style={styles.conteudo}>
          { calopsitas.map(calopsita => <Calopsitas calopsita={calopsita} />)}
         </View>
@@ -71,6 +72,14 @@ export default function App() {
       backgroundColor: '#ffff',
       paddingTop: 20,
     },
+    texto:{
+      fontSize: 20,
+       textAlign:'center'
+    },
+    textocard: {
+      color: 'black',
+      fontSize: 15,
+    },
     conteudo: {
       flex: 1,
       backgroundColor: '#ffff',
@@ -83,7 +92,7 @@ export default function App() {
       width: '40%',
       heigth: 515,
       borderRadius: 10,
-      margin: 15
+      margin: 19,
     },
     calopsita: {
       resizeMode: 'stretch',

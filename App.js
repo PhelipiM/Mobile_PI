@@ -23,7 +23,7 @@ export default function App() {
     <NavigationContainer>
     <Stack.Navigator initialRouteName='Login'>
       <Stack.Screen name="Login" component={Login} />
-      <Stack.Screen name="Main" component={Main} options={{ title: "Amigos de Joinville" }}/>
+      <Stack.Screen name="Main" component={Main} options={{ title: "Amigos de Joinville"}} style={{ color: "pink" }}/>
     </Stack.Navigator>
     </NavigationContainer>
   );

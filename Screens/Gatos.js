@@ -1,18 +1,18 @@
 import React from 'react';
 // import { Card } from 'react-native-paper';
-import { Image, Text, View, StyleSheet, ScrollView } from 'react-native';
+import { Text, View, StyleSheet, ScrollView } from 'react-native';
 import { Card } from 'react-native-paper';
 
 function Gatos(props) {
   return (
     <Card style={styles.card}>
     <Card.Content>
-    <Image
+    <Card.Cover
         source={{uri: props.gato.capa}}
         style={styles.gato}
       />
-      <Text style={{ color: 'darked' }}> {props.gato.titulo}</Text>
-      <Text style={{ fontSize: 12 }}> {props.gato.raca}</Text>
+      <Text style={styles.textocard}> {props.gato.titulo}</Text>
+      <Text style={styles.textocard}> {props.gato.raca}</Text>
     </Card.Content>
     </Card>
   );
@@ -55,7 +55,7 @@ export default function App() {
     return (
       <ScrollView style={styles.scroll}>
         <View style={styles.container}>
-          <Text style={{ fontSize: 20, fontWeigth: 'bold', textAlign:'center' }}> Se encante, e adote</Text>
+          <Text style={styles.texto}> Se encante e adote</Text>
         <View style={styles.conteudo}>
          { gatos.map(gato => <Gatos gato={gato} />)}
         </View>
@@ -70,6 +70,14 @@ export default function App() {
       justifyContent: 'center',
       backgroundColor: '#ffff',
       paddingTop: 20,
+    },
+    texto:{
+      fontSize: 20,
+       textAlign:'center'
+    },
+    textocard: {
+      color: 'black',
+      fontSize: 15,
     },
     conteudo: {
       flex: 1,

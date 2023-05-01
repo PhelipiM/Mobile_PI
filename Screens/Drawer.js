@@ -21,28 +21,28 @@ function MyDrawer() {
         name="Home"
         icon=""
         component={Home}
-        options={{ drawerLabel: "Home", drawerActiveTintColor: "pink" }}
+        options={{ drawerLabel: "Home", drawerActiveTintColor: "#F7559A" }}
       />
       <Drawer.Screen
         name="Cachorros"
         component={Cachorros}
-        options={{ drawerLabel: "Cachorros", drawerActiveTintColor: "pink" }}
+        options={{ drawerLabel: "Cachorros", drawerActiveTintColor: "#F7559A" }}
       />
       <Drawer.Screen
         name="Gatos"
         icon="folder"
         component={Gatos}
-        options={{ drawerLabel: "Gatos", drawerActiveTintColor: "pink" }}
+        options={{ drawerLabel: "Gatos", drawerActiveTintColor: "#F7559A" }}
       />
       <Drawer.Screen
         name="Passaros"
         component={Passaros}
-        options={{ drawerLabel: "Passaros", drawerActiveTintColor: "pink" }}
+        options={{ drawerLabel: "Passaros", drawerActiveTintColor: "#F7559A" }}
       />
       <Drawer.Screen
         name="Perfil"
         component={Perfil}
-        options={{ drawerLabel: "Perfil", drawerActiveTintColor: "pink" }}
+        options={{ drawerLabel: "Perfil", drawerActiveTintColor: "#F7559A" }}
       />
 
     </Drawer.Navigator>
