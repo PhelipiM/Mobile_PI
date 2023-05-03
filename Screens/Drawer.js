@@ -5,9 +5,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 
 import Home from "../Screens/Home";
-import Cachorros from "../Screens/Cachorros";
-import Gatos from "../Screens/Gatos";
-import Passaros from "../Screens/Passaros";
+import ListaAnimais from "../Screens/ListAnimais";
 import Perfil from "../Screens/Perfil";
 
 
@@ -25,18 +23,21 @@ function MyDrawer() {
       />
       <Drawer.Screen
         name="Cachorros"
-        component={Cachorros}
+        component={ListaAnimais}
+        initialParams={{categoria: 'cachorro'}}
         options={{ drawerLabel: "Cachorros", drawerActiveTintColor: "#F7559A" }}
-      />
+        />
       <Drawer.Screen
         name="Gatos"
         icon="folder"
-        component={Gatos}
+        component={ListaAnimais}
+        initialParams={{categoria: 'gato'}}
         options={{ drawerLabel: "Gatos", drawerActiveTintColor: "#F7559A" }}
       />
       <Drawer.Screen
         name="Passaros"
-        component={Passaros}
+        component={ListaAnimais}
+        initialParams={{categoria: 'passaro'}}
         options={{ drawerLabel: "Passaros", drawerActiveTintColor: "#F7559A" }}
       />
       <Drawer.Screen
