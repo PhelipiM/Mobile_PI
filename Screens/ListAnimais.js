@@ -3,6 +3,9 @@ import React from 'react';
 import { Text, View, StyleSheet, ScrollView } from 'react-native';
 import { Card } from 'react-native-paper';
 
+
+
+
 function Animal(props) {
   return (
     <Card style={styles.card}>

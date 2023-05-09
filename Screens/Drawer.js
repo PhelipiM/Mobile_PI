@@ -19,7 +19,7 @@ function MyDrawer() {
         name="Home"
         icon=""
         component={Home}
-        options={{ drawerLabel: "Home", drawerActiveTintColor: "#F7559A" }}
+        options={{ drawerLabel: "Amigos de Joinville", drawerActiveTintColor: "#F7559A" }}
       />
       <Drawer.Screen
         name="Cachorros"
