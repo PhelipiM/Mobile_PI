@@ -3,7 +3,7 @@ import { View, StyleSheet, ScrollView, Text, Image } from "react-native";
 import { Button, TextInput } from "react-native-paper";
 
 const MyComponent = ({ navigation }) => {
-  const [viewPassword, setViewPassword] = React.useState('');
+  const [viewPassword, setViewPassword] = React.useState(false);
   return (
     <View style={styles.containerStyle}>
       <ScrollView contentContainerStyle={styles.scrollViewStyle}>
@@ -24,6 +24,7 @@ const MyComponent = ({ navigation }) => {
           outlineColor="#F7559A"
           activeOutlineColor="#F7559A"
           placeholder="*******"
+          secureTextEntry={viewPassword}
           right={<TextInput.Icon icon={viewPassword? "eye-off" :"eye"} onPress={()=>setViewPassword(!viewPassword)}/>}
         />
         <Button
