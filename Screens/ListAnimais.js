@@ -1,25 +1,36 @@
 import React from 'react';
 // import { Card } from 'react-native-paper';
 import { Text, View, StyleSheet, ScrollView } from 'react-native';
-import { Card } from 'react-native-paper';
+import { Card, Button, Avatar } from 'react-native-paper';
+import Icon from '@mdi/react';
+import { mdiTagHeartOutline } from '@mdi/js';
 
 
 
 
-function Animal(props) {
-  return (
-    <Card style={styles.card}>
-    <Card.Content>
+
+
+const LeftContent = props => <Avatar.Icon {...props} path={mdiTagHeartOutline} size={1}/>
+
+
+const MyComponent = (props) => (
+  <Card style={styles.card}>
+    <Card.Title title={props.animal.titulo} subtitle={props.animal.raca} left={LeftContent} />
+    {/* <Card.Content>
+      <Text variant="titleLarge"> </Text>
+      <Text variant="bodyMedium"> {props.animal.raca}</Text>
+    </Card.Content> */}
     <Card.Cover
-        source={{uri: props.animal.capa}}
-        style={styles.animal}
-      />
-      <Text style={styles.textocard}> {props.animal.titulo}</Text>
-      <Text style={styles.textocard}> {props.animal.raca}</Text>
-    </Card.Content>
-    </Card>
-  );
-}
+      source={{uri: props.animal.capa}}
+      style={styles.animal} 
+/>
+    <Card.Actions style={styles.button}>
+      <Button>Favoritar</Button>
+
+    </Card.Actions>
+  </Card>
+);
+
 
 export default function ListaAnimais({route}) {
   const { categoria } = route.params
@@ -156,10 +167,10 @@ export default function ListaAnimais({route}) {
 
   return (
     <ScrollView style={styles.scroll}>
-      <View style={styles.container}>
+    <View style={styles.container}>
         <Text style={styles.texto}> Se encante e adote!</Text>
       <View style={styles.conteudo}>
-       { filtrados.map(animal => <Animal animal={animal} key={animal.id}/>)}
+       { filtrados.map(animal => <MyComponent animal={animal} key={animal.id}/>)}
       </View>
    </View>
    </ScrollView>
@@ -172,6 +183,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: 'white',
     paddingTop: 20,
+    alignItems: 'center',
+
   },
   texto:{
     fontSize: 20,
@@ -187,34 +200,30 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     width: '100%',
+    alignItems: 'center',
+    marginLeft: 75,
   },
   card: {
-    backgroundColor: 'pink',
-    width: '40%',
+    width: '70%',
     heigth: 51,
-    borderRadius: 10,
+    borderRadius: 5,
     margin: 19,
+    padding: 10,
   },
   animal: {
     resizeMode: 'stretch',
     width: '100%',
-    height: 200,
+    height: 225,
+    paddingLeft:10,
+    paddingRight:10,
   },
   ScrollView: {
     marginHorizontal: 0,
   },
+  button: {
+    marginRight: 0,
+    buttonColor: 'pink',
+  }
 });
 
 
-// import React from 'react';
-// import { View, Text } from 'react-native';
-
-// function Cachorros() {
-//     return (
-//       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-//         <Text>Cachorros Screen</Text>
-//       </View>
-//     );
-//   }
-
-// export default Cachorros
