@@ -1,13 +1,9 @@
 import React from 'react';
 // import { Card } from 'react-native-paper';
 import { Text, View, StyleSheet, ScrollView } from 'react-native';
-import { Card, Button, Avatar } from 'react-native-paper';
+import { Card, Button, Avatar, Title } from 'react-native-paper';
 import Icon from '@mdi/react';
 import { mdiTagHeartOutline } from '@mdi/js';
-
-
-
-
 
 
 const LeftContent = props => <Avatar.Icon {...props} path={mdiTagHeartOutline} size={1}/>
@@ -16,16 +12,13 @@ const LeftContent = props => <Avatar.Icon {...props} path={mdiTagHeartOutline} s
 const MyComponent = (props) => (
   <Card style={styles.card}>
     <Card.Title title={props.animal.titulo} subtitle={props.animal.raca} left={LeftContent} />
-    {/* <Card.Content>
-      <Text variant="titleLarge"> </Text>
-      <Text variant="bodyMedium"> {props.animal.raca}</Text>
-    </Card.Content> */}
+    
     <Card.Cover
       source={{uri: props.animal.capa}}
       style={styles.animal} 
 />
     <Card.Actions style={styles.button}>
-      <Button>Favoritar</Button>
+      <Button buttonColor='#F7559A' theme={{ colors: { primary: 'white' } }}>Favoritar</Button>
 
     </Card.Actions>
   </Card>
@@ -187,12 +180,8 @@ const styles = StyleSheet.create({
 
   },
   texto:{
-    fontSize: 20,
+    fontSize: 25,
      textAlign:'center'
-  },
-  textocard: {
-    color: 'black',
-    fontSize: 15,
   },
   conteudo: {
     flex: 1,
@@ -206,16 +195,15 @@ const styles = StyleSheet.create({
   card: {
     width: '70%',
     heigth: 51,
-    borderRadius: 5,
+    borderRadius: 0,
     margin: 19,
     padding: 10,
+    backgroundColor: 'white',
   },
   animal: {
     resizeMode: 'stretch',
     width: '100%',
     height: 225,
-    paddingLeft:10,
-    paddingRight:10,
   },
   ScrollView: {
     marginHorizontal: 0,
@@ -223,7 +211,11 @@ const styles = StyleSheet.create({
   button: {
     marginRight: 0,
     buttonColor: 'pink',
-  }
+  },
+  buttoncard: {
+    marginRight: 0,
+    buttonColor: 'pink',
+  },
 });
 
 
