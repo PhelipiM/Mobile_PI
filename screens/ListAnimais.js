@@ -1,15 +1,21 @@
 import React from 'react';
 // import { Card } from 'react-native-paper';
 import { Text, View, StyleSheet, ScrollView } from 'react-native';
-import { Card, Button, Avatar, Title } from 'react-native-paper';
+import { Card, Avatar, Title } from 'react-native-paper';
 import Icon from '@mdi/react';
+import 'react-native-gesture-handler';
+import Button from "../components/Button"
+
+
 import { mdiTagHeartOutline } from '@mdi/js';
+
 
 
 const LeftContent = props => <Avatar.Icon {...props} path={mdiTagHeartOutline} size={1}/>
 
 
 const MyComponent = (props) => (
+
   <Card style={styles.card}>
     <Card.Title title={props.animal.titulo} subtitle={props.animal.raca} left={LeftContent} />
     
@@ -18,11 +24,14 @@ const MyComponent = (props) => (
       style={styles.animal} 
 />
     <Card.Actions style={styles.button}>
-      <Button buttonColor='#F7559A' theme={{ colors: { primary: 'white' } }}>Favoritar</Button>
-
+      <Button></Button>
+      {/* <Button buttonColor='#F7559A'  theme={{ colors: { primary: 'white' } }}>Favoritar
+      </Button> */}
     </Card.Actions>
   </Card>
 );
+
+
 
 
 export default function ListaAnimais({route}) {

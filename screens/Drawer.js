@@ -4,9 +4,9 @@ import * as React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 
-import Home from "../Screens/Home";
-import ListaAnimais from "../Screens/ListAnimais";
-import Perfil from "../Screens/Perfil";
+import Home from "../screens/Home";
+import ListaAnimais from "../screens/ListAnimais";
+import Perfil from "../screens/Perfil";
 
 
 
