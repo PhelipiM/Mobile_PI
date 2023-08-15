@@ -11,6 +11,7 @@ import { createBottomTabNavigator} from '@react-navigation/bottom-tabs'
 
 import Main from "./screens/Main";
 import Login from "./screens/Login"
+import DetailAnimal from './screens/Animal';
 
 import { ScrollView } from 'react-native-gesture-handler';
 
@@ -24,6 +25,7 @@ export default function App() {
     <Stack.Navigator initialRouteName='Login'>
       <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="Main" component={Main} options={{ headerShown:false}} style={{ color: "pink" }}/>
+      <Stack.Screen name="DetailAnimal" component={DetailAnimal} options={{ headerShown:false}} style={{ color: "pink" }}/>
     </Stack.Navigator>
     </NavigationContainer>
   );

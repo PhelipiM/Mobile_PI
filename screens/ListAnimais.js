@@ -24,7 +24,7 @@ const MyComponent = (props) => (
       style={styles.animal} 
 />
     <Card.Actions style={styles.button}>
-      <Button></Button>
+      <Button navigation={props.navigation}></Button>
       {/* <Button buttonColor='#F7559A'  theme={{ colors: { primary: 'white' } }}>Favoritar
       </Button> */}
     </Card.Actions>
@@ -34,7 +34,7 @@ const MyComponent = (props) => (
 
 
 
-export default function ListaAnimais({route}) {
+export default function ListaAnimais({route, navigation}) {
   const { categoria } = route.params
   const animais = [
     {
@@ -172,7 +172,7 @@ export default function ListaAnimais({route}) {
     <View style={styles.container}>
         <Text style={styles.texto}> Se encante e adote!</Text>
       <View style={styles.conteudo}>
-       { filtrados.map(animal => <MyComponent animal={animal} key={animal.id}/>)}
+       { filtrados.map(animal => <MyComponent animal={animal} key={animal.id} navigation={navigation}/>)}
       </View>
    </View>
    </ScrollView>

@@ -12,7 +12,7 @@ const MyComponent = ({ navigation }) => {
           mode={"contained"}
           onPress={() => navigation.navigate("DetailAnimal")}
         >
-          Log In
+          Ver +
         </Button>
   )}
 
