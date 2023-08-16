@@ -1,7 +1,18 @@
-import axios from 'axios';
+import api from '../apis/api'
 
-const api = axios.create({
-  baseURL: 'http://191.52.55.58:19003',
-});
+class AnimalService {
+  async getAllAnimals() {
+    const response = await api.get('/animals/')
+    return response.data
+  }
+  async saveAnimal(animal) {
+    const response = await api.post('/animals/', animal)
+    return response.data
+  }
+  async deleteAnimal(animal) {
+    const response = await api.delete(`/animals/${animal.id}/`)
+    return response.data
+  }
+}
 
-export default api;
+export default new AnimalService()
