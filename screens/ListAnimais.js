@@ -48,7 +48,6 @@ function ListAnimais({route, navigation}) {
     .then(response => {
       setData(response.data)
       const novosFiltrados = animais.filter(animal => animal.categoria === categoria)
-      console.log(novosFiltrados)
       setFiltrados(novosFiltrados)
     });
   }, []);
