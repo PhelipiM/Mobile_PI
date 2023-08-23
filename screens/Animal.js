@@ -4,6 +4,7 @@ import { Avatar, Button, Card, Text } from 'react-native-paper';
 import { View, StyleSheet } from 'react-native';
 
 
+
 const LeftContent = props => <Avatar.Icon {...props} icon="folder" />
 export default function DetailAnimal() {
   return (
