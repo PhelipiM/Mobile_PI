@@ -24,20 +24,20 @@ function MyDrawer() {
       <Drawer.Screen
         name="Cachorros"
         component={ListaAnimais}
-        initialParams={{categoria: 'Cachorro'}}
+        initialParams={{especie: 'Cachorro'}}
         options={{ drawerLabel: "Cachorros", drawerActiveTintColor: "#F7559A" }}
         />
       <Drawer.Screen
         name="Gatos"
         icon="folder"
         component={ListaAnimais}
-        initialParams={{categoria: 'Gato'}}
+        initialParams={{especie: 'Gato'}}
         options={{ drawerLabel: "Gatos", drawerActiveTintColor: "#F7559A" }}
       />
       <Drawer.Screen
         name="Passaros"
         component={ListaAnimais}
-        initialParams={{categoria: 'passaro'}}
+        initialParams={{especie: 'passaro'}}
         options={{ drawerLabel: "Passaros", drawerActiveTintColor: "#F7559A" }}
       />
       <Drawer.Screen

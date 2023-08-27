@@ -19,10 +19,10 @@ const LeftContent = props => <Avatar.Icon {...props} path={mdiTagHeartOutline} s
 const MyComponent = (props) => (
 
   <Card style={styles.card}>
-    <Card.Title title={props.animal.titulo} subtitle={props.animal.raca} left={LeftContent} />
+    <Card.Title title={props.animal.nome} subtitle={props.animal.raca} left={LeftContent} />
     
     <Card.Cover
-      source={{uri: props.animal.capa}}
+      source={{uri: props.animal.foto}}
       style={styles.animal} 
 />
     <Card.Actions style={styles.button}>
@@ -37,17 +37,17 @@ const MyComponent = (props) => (
 
 
 function ListAnimais({route, navigation}) {
-  const { categoria } = route.params  
+  const { especie } = route.params  
 
   const [animais, setData] = useState([]);
   const [filtrados, setFiltrados] = useState([])
 
   
   useEffect(() => {
-    axios.get('http://191.52.55.58:19003/animais/')
+    axios.get('http://192.168.0.173:19003/animais/')
     .then(response => {
       setData(response.data)
-      const novosFiltrados = animais.filter(animal => animal.categoria === categoria)
+      const novosFiltrados = animais.filter(animal => animal.especie === especie)
       setFiltrados(novosFiltrados)
     });
   }, []);
@@ -55,7 +55,7 @@ function ListAnimais({route, navigation}) {
   return (
     <ScrollView style={styles.scroll}>
     <View style={styles.container}>
-        <Text style={styles.texto}> Se encante e adoteX!</Text>
+        <Text style={styles.texto}> Se encante e adote!</Text>
       <View style={styles.conteudo}>
        { filtrados.map(animal => <MyComponent animal={animal} key={animal.id} navigation={navigation}/>)}
       </View>
