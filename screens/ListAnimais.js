@@ -44,7 +44,7 @@ function ListAnimais({route, navigation}) {
 
   
   useEffect(() => {
-    axios.get('http://192.168.0.173:19003/animais/')
+    axios.get('http://191.52.55.58:19003/animais/')
     .then(response => {
       setData(response.data)
       const novosFiltrados = animais.filter(animal => animal.especie === especie)
@@ -55,7 +55,7 @@ function ListAnimais({route, navigation}) {
   return (
     <ScrollView style={styles.scroll}>
     <View style={styles.container}>
-        <Text style={styles.texto}> Se encante e adote!</Text>
+        <Text style={styles.texto}> Se encante e adotex</Text>
       <View style={styles.conteudo}>
        { filtrados.map(animal => <MyComponent animal={animal} key={animal.id} navigation={navigation}/>)}
       </View>

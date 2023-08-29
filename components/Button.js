@@ -10,7 +10,10 @@ const MyComponent = ({ navigation }) => {
         <Button
           style={styles.buttonforms}
           mode={"contained"}
-          onPress={() => navigation.navigate("DetailAnimal")}
+          onPress={() => navigation.navigate("DetailAnimal", {
+              id: '1' ,
+
+          })}
         >
           Ver +
         </Button>
