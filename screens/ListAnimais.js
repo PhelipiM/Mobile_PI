@@ -26,7 +26,7 @@ const MyComponent = (props) => (
       style={styles.animal} 
 />
     <Card.Actions style={styles.button}>
-      <Button navigation={props.navigation}></Button>
+      <Button id={props.animal.id} navigation={props.navigation}></Button>
       {/* <Button buttonColor='#F7559A'  theme={{ colors: { primary: 'white' } }}>Favoritar
       </Button> */}
     </Card.Actions>

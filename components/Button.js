@@ -5,20 +5,24 @@ import { Button } from "react-native-paper";
 
 
 
-const MyComponent = ({ navigation }) => {
+
+const MyComponent = ({ navigation, animal, id }) => {
+  const navigateToDetail = () => {
+    navigation.navigate("DetailAnimal", {
+      id: id,
+    });
+  };
+
   return (
-        <Button
-          style={styles.buttonforms}
-          mode={"contained"}
-          onPress={() => navigation.navigate("DetailAnimal", {
-              id: '1' ,
-
-          })}
-        >
-          Ver +
-        </Button>
-  )}
-
+    <Button
+      style={styles.buttonforms}
+      mode="contained"
+      onPress={navigateToDetail}
+    >
+      Ver +
+    </Button>
+  );
+};
 export default MyComponent;
 
 const styles = StyleSheet.create({

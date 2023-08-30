@@ -11,6 +11,7 @@ const DetailComponent = (props) => (
        <Card.Content>
          <Text>{props.animal.nome}</Text>
          <Text>{props.animal.raca.nome}</Text>
+         
        </Card.Content>
       
      </Card>
