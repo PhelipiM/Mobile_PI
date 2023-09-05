@@ -1,13 +1,14 @@
 import React from "react";
 import { View, StyleSheet, ScrollView, Text, Image } from "react-native";
 import { Button, TextInput } from "react-native-paper";
+const logo = require("../images/pi.png");
 
 const MyComponent = ({ navigation }) => {
   const [viewPassword, setViewPassword] = React.useState(false);
   return (
     <View style={styles.containerStyle}>
       <ScrollView contentContainerStyle={styles.scrollViewStyle}>
-        <Image style={styles.logo} source={require("../assets/pi.png")} />
+        <Image style={styles.logo} source={logo} />
         <Text style={styles.headingStyle}>Entrar </Text>
         <TextInput
           style={styles.input}

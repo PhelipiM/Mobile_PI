@@ -9,9 +9,9 @@ import { createBottomTabNavigator} from '@react-navigation/bottom-tabs'
 // import Drawer from "./components/Drawer";
 // import Tab from "./components/Tab"
 
-import Main from "./screens/Main";
-import Login from "./screens/Login"
-import DetailAnimal from './screens/Animal';
+import Main from "./src/screens/Main";
+import Login from "./src/screens/Login"
+import DetailAnimal from './src/screens/Animal';
 
 import { ScrollView } from 'react-native-gesture-handler';
 

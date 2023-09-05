@@ -34,12 +34,12 @@ function MyDrawer() {
         initialParams={{especie: 'Gato'}}
         options={{ drawerLabel: "Gatos", drawerActiveTintColor: "#F7559A" }}
       />
-      <Drawer.Screen
+      {/* <Drawer.Screen
         name="Passaros"
         component={ListaAnimais}
         initialParams={{especie: 'passaro'}}
         options={{ drawerLabel: "Passaros", drawerActiveTintColor: "#F7559A" }}
-      />
+      /> */}
       <Drawer.Screen
         name="Perfil"
         component={Perfil}

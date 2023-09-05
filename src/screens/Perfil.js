@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 import { MaterialCommunityIcons, MaterialIcons } from '@expo/vector-icons';
 import { Avatar } from "react-native-paper";
+const perfil = require("../images/profile.png");
 
 export default function Perfil({ navigation }) {
   return (
@@ -18,7 +19,7 @@ export default function Perfil({ navigation }) {
       <Avatar.Image
         style={styles.profile}
         size={100}
-        source={require("../assets/profile.png")}
+        source={perfil}
       />
         <TouchableOpacity style={styles.option} onPress={() => {}}>
           <MaterialCommunityIcons name="bell-outline" size={35} color="#F7559A" />
