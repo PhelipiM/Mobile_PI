@@ -15,7 +15,7 @@
   <tr>
     <td align="center">
       <a href="https://github.com/AnaLuizaDias">
-        <img src="analu.png" width="100px;"/><br>
+        <img src="analu.jpg" width="100px;"/><br>
         <sub>
           <b>Ana Luiza Dias da Rocha</b>
         </sub>
