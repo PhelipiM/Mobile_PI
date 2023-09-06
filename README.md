@@ -24,8 +24,6 @@ Tela de Adoção de Cachorros e Gatos: Apresenta detalhes de animais disponívei
         </sub>
       </a>
     </td>
-  </tr>
-  <tr>
     <td align="center">
       <a href="https://github.com/AnaLuizaDias">
         <img src="analu.jpg" width="100px;"/><br>
