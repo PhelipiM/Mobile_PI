@@ -26,7 +26,12 @@ const MyComponent = ({ navigation }) => {
           activeOutlineColor="#F7559A"
           placeholder="*******"
           secureTextEntry={viewPassword}
-          right={<TextInput.Icon icon={viewPassword? "eye-off" :"eye"} onPress={()=>setViewPassword(!viewPassword)}/>}
+          right={
+            <TextInput.Icon
+              icon={viewPassword ? "eye-off" : "eye"}
+              onPress={() => setViewPassword(!viewPassword)}
+            />
+          }
         />
         <Button
           style={styles.buttonforms}

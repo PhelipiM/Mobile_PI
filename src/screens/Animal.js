@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from "react";
 import "react-native-gesture-handler";
-import { Avatar, Button, Card, Text } from "react-native-paper";
+import { Card, Text } from "react-native-paper";
 import { View, StyleSheet, ScrollView } from "react-native";
 import axios from "axios";
 
 const DetailComponent = (props) => (
   <View style={styles.container}>
-      <Card.Cover style={styles.card} source={{ uri: props.animal.foto }} />
-      <Card style={styles.detail}>
-      <Card.Content>
+    <Card.Cover style={styles.card} source={{ uri: props.animal.foto }} />
+    <Card style={styles.detail}>
+      <Card.Content style={styles.text}>
         <Text variant="titleLarge">{props.animal.nome}</Text>
         <Text variant="bodyMedium">{props.animal.raca.nome}</Text>
+        <Text variant="bodyMedium">{props.animal.descricao}</Text>
       </Card.Content>
     </Card>
   </View>
@@ -23,10 +24,11 @@ function DetailAnimal({ route, navigation }) {
     foto: "",
     nome: "",
     raca: "",
+    descricao: "",
   });
 
   useEffect(() => {
-    axios.get(`http://192.168.0.173:19003/animais/${id}`).then((response) => {
+    axios.get(`http://191.52.55.58:19003/animais/${id}`).then((response) => {
       setAnimal(response.data);
     });
   }, []);
@@ -41,7 +43,6 @@ function DetailAnimal({ route, navigation }) {
             key={animal.id}
             navigation={navigation}
           />
-          {/* { filtrados.map(animal => <DetailComponent animal={animal} key={animal.id} navigation={navigation}/>)} */}
         </View>
       </View>
     </ScrollView>
@@ -55,7 +56,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
-    paddingTop: "25%",
+    paddingTop: "15%",
   },
   card: {
     width: 250,
@@ -67,6 +68,10 @@ const styles = StyleSheet.create({
     marginTop: 30,
     marginBottom: 100,
     backgroundColor: "white",
+    margin: 20,
+  },
+  text: {
+    alignItems: "center",
   },
   ScrollView: {
     marginHorizontal: 0,
