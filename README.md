@@ -7,7 +7,7 @@
 
 ## Telas
 
-<p align="justify">Tela Inicial de Login: O ponto de entrada para os usuários, onde podem fazer login ou criar uma conta.<br>
+<p align="justify">Tela Inicial de Login: O ponto de entrada para os usuários, onde podem futuramente fazer login ou criar uma conta.<br>
 Tela de Perfil: Permite aos usuários personalizar informações pessoais e preferências de adoção. <br>
 Tela Home: Mostra atividades recentes relacionadas à adoção de animais, notícias e eventos.  <br>
 Tela de Adoção de Cachorros e Gatos: Apresenta detalhes de animais disponíveis para adoção, incluindo fotos, descrições e informações de contato.
