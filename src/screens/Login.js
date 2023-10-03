@@ -1,6 +1,42 @@
 import React from "react";
 import { View, StyleSheet, ScrollView, Text, Image } from "react-native";
 import { Button, TextInput } from "react-native-paper";
+
+import * as SecureStore from 'expo-secure-store';
+import { useSetRecoilState } from 'recoil';
+
+import loginApi from '../services/login';
+import { userState } from '../recoil/atoms/auth';
+
+export default function Login({ navigation }) {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [errorMsg, setErrorMsg] = useState(null);
+
+  const setUser = useSetRecoilState(userState);
+
+  const login = async () => {
+    try {
+      const data = await loginApi.login(username, password);
+      setUser({
+        loggedIn: true,
+        access: data.access,
+        refresh: data.refresh,
+      });
+      setUsername('');
+      setPassword('');
+      setErrorMsg(null);
+      await SecureStore.setItemAsync('access', data.access);
+      navigation.goBack();
+    } catch (error) {
+      setUser({ loggedIn: false, access: null, refresh: null });
+      setErrorMsg('Usuário ou senha inválidos!');
+      await SecureStore.deleteItemAsync('access');
+    }
+  };
+}
+
+
 const logo = require("../images/pi.png");
 
 const MyComponent = ({ navigation }) => {
@@ -79,4 +115,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default MyComponent;
+
