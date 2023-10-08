@@ -28,7 +28,7 @@ function DetailAnimal({ route, navigation }) {
   });
 
   useEffect(() => {
-    axios.get(`http://191.52.55.58:19003/animais/${id}`).then((response) => {
+    axios.get(`https://django-pi-j444-dev.fl0.io/animais/${id}`).then((response) => {
       setAnimal(response.data);
     });
   }, []);

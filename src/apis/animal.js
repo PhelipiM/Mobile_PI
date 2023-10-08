@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const apianimais = axios.create({
-  baseURL: 'http://191.52.55.58:19003/animais/'
+  baseURL: 'https://django-pi-j444-dev.fl0.io/animais/'
 })
 
 export default apianimais

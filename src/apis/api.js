@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api = axios.create({
-  baseURL: 'http://191.52.55.58:19003/'
+  baseURL: 'https://django-pi-j444-dev.fl0.io/'
 })
 
 export default api

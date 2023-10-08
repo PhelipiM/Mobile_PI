@@ -33,7 +33,7 @@ function ListAnimais({ route, navigation }) {
   const [filtrados, setFiltrados] = useState([]);
 
   useEffect(() => {
-    axios.get("http://191.52.55.58:19003/animais/").then((response) => {
+    axios.get("https://django-pi-j444-dev.fl0.io/animais/").then((response) => {
       setData(response.data);
       const novosFiltrados = animais.filter(
         (animal) => animal.especie === especie
