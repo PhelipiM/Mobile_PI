@@ -8,13 +8,13 @@ import {
 } from "react-native";
 import { MaterialCommunityIcons, MaterialIcons } from "@expo/vector-icons";
 import { Avatar } from "react-native-paper";
-const perfil = require("../images/profile.png");
+const perfil = require("../images/ana1.jpg");
 
 export default function Perfil({ navigation }) {
   return (
     <ScrollView style={styles.container}>
       <ScrollView>
-        <Text style={styles.perfil}>Amanda de Souza Tavares</Text>
+        <Text style={styles.perfil}>Ana Paula</Text>
 
         <Avatar.Image style={styles.profile} size={100} source={perfil} />
         <TouchableOpacity style={styles.option} onPress={() => {}}>

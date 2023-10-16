@@ -6,6 +6,8 @@ import { createDrawerNavigator } from "@react-navigation/drawer";
 import Home from "../screens/Home";
 import ListaAnimais from "../screens/ListAnimais";
 import Perfil from "../screens/Perfil";
+import Sobre from "../screens/Sobre";
+
 
 const Drawer = createDrawerNavigator();
 function MyDrawer() {
@@ -33,6 +35,12 @@ function MyDrawer() {
         component={ListaAnimais}
         initialParams={{ especie: "Gato" }}
         options={{ drawerLabel: "Gatos", drawerActiveTintColor: "#F7559A" }}
+      />
+      <Drawer.Screen
+        name="Sobre"
+        icon="folder"
+        component={Sobre}
+        options={{ drawerLabel: "Sobre", drawerActiveTintColor: "#F7559A" }}
       />
       {/* <Drawer.Screen
         name="Passaros"
