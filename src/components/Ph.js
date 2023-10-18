@@ -6,7 +6,7 @@ import {
 } from "react-native";
 import { MaterialCommunityIcons, MaterialIcons } from "@expo/vector-icons";
 import { Avatar } from "react-native-paper";
-const perfil = require("../images/ana1.jpg");
+const perfil = require("../images/eu.jpeg");
 
 export default function Perfil({ navigation }) {
   return (
@@ -14,7 +14,7 @@ export default function Perfil({ navigation }) {
       <ScrollView>
         <Avatar.Image style={styles.profile} size={100} source={perfil} />
         <Text style={styles.perfil}>Phelipi</Text>
-        <Text style={styles.texto}>Estudande no Instututo Federal Catarinence</Text>
+        <Text style={styles.texto}>Estudande no Instututo Federal Catarinense</Text>
         </ScrollView>
     </ScrollView>
   );

@@ -14,7 +14,7 @@ export default function Perfil({ navigation }) {
       <ScrollView>
         <Avatar.Image style={styles.profile} size={100} source={perfil} />
         <Text style={styles.perfil}>Ana Luiza</Text>
-        <Text style={styles.texto}>Estudande no Instututo Federal Catarinence</Text>
+        <Text style={styles.texto}>Estudande no Instututo Federal Catarinense</Text>
         </ScrollView>
     </ScrollView>
   );
